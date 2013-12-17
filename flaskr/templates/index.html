@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+  
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+
+
+<br/>
+<br/>
+
+
+<div class = "container">
+
+
+<div class="row">
+  <div class="col-xs-4"></div>
+  <div class="col-xs-4">
+    
+  
+<a href = "/lost"> <button type="button" class="btn btn-primary btn-lg btn-block">Lost</button> </a> <br/>
+<a href = "/found"> <button type="button" class="btn btn-primary btn-lg btn-block">Found</button> </a> <br/>
+
+  
+
+<a href = "/show_lost_all"> Show all Lost items </a> <br/>
+<a href = "/show_found_all"> Show all Found items </a> <br/>
+  
+  
+  
+  </div>
+  <div class="col-xs-4"></div>
+</div>
+
+</div>
+
+
+{% endblock %}

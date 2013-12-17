@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+
+<div class="row">
+  <div class="col-xs-4"></div>
+  <div class="col-xs-4">
+
+
+
+
+
+  <ul class=entries>
+  {% for entry in entries %}
+
+    <li><h3>Name: </h3> {{ entry.name }}  </li> <br /><br />
+    <li><h3>Item: </h3> {{ entry.item | safe }}  </li> <br /><br />
+    <li><h3>Description: </h3> {{ entry.description | safe }}  </li> <br /><br />
+    <li><h3>Number: </h3> {{ entry.number | safe }}  </li> <br /><br />
+    <li><h3>Email: </h3> {{ entry.email | safe }}  </li> <br /><br />
+
+
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  </ul>  
+
+
+  
+  	   <button type="button" class="btn btn-primary" onclick="window.location='/';"> Back</button>  <br/>
+
+  </div>
+  <div class="col-xs-4"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
